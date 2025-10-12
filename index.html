@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ссылки, форма, таблица и CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        <header>
+            <img id="some_logo" src="Letter.png" alt="Описание картинки" />
+            <h1>Ссылки, форма, таблица и CSS</h1>
+        </header>
+        <nav>
+            <a href="#hyperlinks">Список гиперссылок</a> <a href="#table">Таблица</a> <a href="#form">Форма</a>
+        </nav>
+    </div>
+    <main>
+        <section id="hyperlinks">
+            <h3>Гиперссылки</h3>
+            <div>
+                <ul>
+                    <li><a href="http://kubsu.ru"> Абсолютная на главную страницу kubsu.ru (HTTP)</a></li>
+                    <li><a href="https://kubsu.ru"> Абсолютная на главную страницу kubsu.ru (HTTPS)</a></li>
+                    <li><a href="https://example.com/about"><img src="Flower.jpg" alt="Flower" style="width: 200px;"></a> Ссылка-изображение </li>
+                    <li><a href="ru/abiturient"> Сокращенная ссылка на внутреннюю страницу</a></li>
+                    <li><a href="/"> / — сокращённая ссылка на главную</a></li>
+                    <li><a href="#about"> Ссылка на фрагмент текущей страницы</a></li>
+                    <li><a href="search.html?cat=books&sort=price&view=list"> Ссылка с тремя параметрами в URL</a></li>
+                    <li><a href="/profile?id=123"> С параметром id в URL</a></li>
+                    <li><a href="page.html"> Относительная на страницу в текущем каталоге</a></li>
+                    <li><a href="about/page.html"> Относительная на страницу в каталоге about</a></li>
+                    <li><a href="../page.html"> Относительная на страницу в каталоге уровнем выше</a></li>
+                    <li><a href="../../page.html"> ../../up-two.html (двумя уровнями выше)</a></li>
+                    <li> Контекстная в тексте абзаца: Больше вы можете узнать на <a href="https://kubsu.ru"> сайте</a> </li>
+                    <li><a href="https://kubsu.ru#section"> Ссылка на фрагмент страницы стороннего сайта</a></li>
+                    <li>
+                        Ссылки из прямоугольных и круглых областей картинки (HTML-тег map)<br>
+                        <img src="image.jpg" alt="Карта ссылок" usemap="#imageMap" style="width: 200px;">
+                        <map name="imageMap">
+                            <area shape="rect" coords="20,20,40,30" href="https://kubsu.ru" alt="Прямоугольная область">
+                            <area shape="circle" coords="150,50,25" href="https://example.com" alt="Круглая область">
+                        </map>
+                    </li>
+                    <li><a href=""> Ссылка с пустым href</a></li>
+                    <li><a> Ссылка без href</a></li>
+                    <li><a href="https://example.com/private" rel="nofollow"> Запрещена для перехода поисковикам</a></li>
+                    <li><a href="https://example.com/noindex-target" rel="noindex"> Запрещенна для индексации поисковиками</a></li>
+                    <li>
+                        Нумерованный список с title:
+                        <ol>
+                            <li><a href="https://kubsu.ru" title="Главная страница университета"> Ссылка 1</a></li>
+                            <li><a href="https://example.com/about" title="Скачать документ 2 (PDF)"> Ссылка 2 </a></li>
+                        </ol>
+                    </li>
+                    <li><a href="ftp://user:password@ftp.example.com/file.txt"> Ссылка на файл на сервере FTP с авторизацией </a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="table">
+            <h3>Таблица</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Колонка №1</th>
+                        <th>Колонка №2</th>
+                        <th>Колонка №3</th>
+                        <th>Колонка №4</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ячейка 1.1</td>
+                        <td colspan="2">Ячейка 1.2-3</td>
+                        <td>Ячейка 1.4</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="5">Ячейка 2-6.1</td>
+                        <td>Ячейка 2.2</td>
+                        <td>Ячейка 2.3</td>
+                        <td rowspan="5">Ячейка 2-6.4</td>
+                    </tr>
+                    <tr>
+                        <td>Ячейка 3.2</td>
+                        <td>Ячейка 3.3</td>
+                    </tr>
+                    <tr>
+                        <td>Ячейка 4.2</td>
+                        <td>Ячейка 4.3</td>
+
+                    </tr>
+                    <tr>
+                        <td>Ячейка 5.2</td>
+                        <td>Ячейка 5.3</td>
+                    </tr>
+                    <tr>
+                        <td>Ячейка 6.2</td>
+                        <td>Ячейка 6.3</td>
+                    </tr>
+                    <tr>
+                        <td>Ячейка 7.1</td>
+                        <td colspan="2">Ячейка 7.2-3</td>
+                        <td>Ячейка 7.4</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+        <section id="form">
+            <h3>Форма</h3>
+            <form action="URl_отправки_данных" method="POST" address="">
+                <label>
+                    ФИО<br />
+                    <input id="fullname" name="fullname" type="text"><br />
+                </label>
+                <label>
+                    Телефон<br />
+                    <input id="phone" name="phone" type="tel"><br />
+                </label>
+                <label>
+                    E‑mail<br />
+                    <input id="email" name="email" type="email"><br />
+                </label>
+                <label>
+                    Дата рождения<br />
+                    <input id="birthday" name="birthday" type="date"><br />
+                </label>
+                Пол
+                <label><br /><input type="radio" name="gender" value="male" required> Мужской</label>
+                <label><input type="radio" name="gender" value="female"> Женский</label><br />
+
+                <label>Любимый язык программирования (можно выбрать несколько)</label><br />
+                <select multiple="multiple">
+                    <option value="Pascal">Pascal</option>
+                    <option value="C">C</option>
+                    <option value="C++">C++</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="PHP">PHP</option>
+                    <option value="Python">Python</option>
+                    <option value="Java">Java</option>
+                    <option value="Haskel">Haskel</option>
+                    <option value="Clojure">Clojure</option>
+                    <option value="Prolog">Prolog</option>
+                    <option value="Scala">Scala</option>
+                </select><br />
+
+                <label>
+                    Биография:<br />
+                    <textarea id="bio"></textarea>
+                </label><br /><br />
+
+                <label>
+                    <input type="checkbox" name="check" />
+                    Ознакомлен
+                </label><br />
+
+                <button type="submit">Сохранить</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <spam>(с) Илья Жирнов</spam>
+    </footer>
+
+
+</body>

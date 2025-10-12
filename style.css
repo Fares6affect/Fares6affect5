@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+main,body div,nav {
+    display: flex;
+    flex-direction: column;
+}
+header, nav, section, footer {
+    background-color: cornflowerblue;
+    width: 100%;
+    padding: 20px;
+}
+nav,section{
+    margin:20px 0px;
+}
+nav{
+    margin:20px 0px 10px;
+    order:2;
+}
+#hyperlinks{
+    margin:10px 0px;
+}
+header{
+    height:50px;
+    padding:20px;
+    order:1;
+}
+#some_logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: red;
+    position:absolute;
+}
+header h1{
+    text-align:center;
+    position:relative;
+    bottom:-5px;
+}
+#table {
+    order: 1;
+}
+#hyperlinks {
+    order: 2;
+}
+#form {
+    order: 3;
+}
+a, a:visited {
+    color: black;
+    text-decoration: none;
+}
+a:hover {
+    color: red;
+}
+th {
+    background: yellow;
+}
+th, td {
+    padding: 2px 10px;
+    text-align: center;
+    border: 1px solid black;
+}
+table {
+    border: 2px solid black;
+    border-collapse: collapse;
+    margin: 10px auto;
+}
+table tr {
+    background: red;
+}
+table tr:nth-of-type(2) {
+    background: green;
+}
+table tr:nth-of-type(3) {
+    background: red;
+}
+table tr:nth-of-type(4) {
+    background: green;
+}
+table tr:nth-of-type(5) {
+    background: red;
+}
+table tr:nth-of-type(6) {
+    background: green;
+}
+table tr:nth-of-type(7) {
+    background: red;
+}
+form {
+    margin: 10px 50px;
+}
+#fullname, #phone, #email, #birthday, #bio {
+    padding: 2px;
+}
+ul {
+    margin: 10px 50px;
+}
+#bio {
+    width: 500px;
+    height: 200px;
+}
+@media screen and (min-width:720px){
+    body div,nav{
+        flex-direction:row;
+    }
+    body div {
+        background-color: cornflowerblue;
+        width:100%;
+    }
+    #table {
+        order: 2;
+    }
+    #hyperlinks {
+        order: 1;
+    }
+    nav {
+        height:min-content;
+        margin:0px;
+        padding:10px;
+        text-align: center;
+        max-width: 960px;
+        width: 325px;
+        border: 1px solid black;
+    }
+    nav a{
+        padding-right:5px;
+    }
+    header {
+        left:-20px;
+    }
+    #hyperlinks,#table,#form {
+        width: 960px;
+        margin: 25px auto;
+    }
+    footer {
+        margin-top: 50px;
+    }
+
+}
+
