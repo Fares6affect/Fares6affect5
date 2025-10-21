@@ -7,7 +7,7 @@ main,body div,nav {
     display: flex;
     flex-direction: column;
 }
-header, nav, section, footer {
+header, nav, section, footer, Calculator{
     background-color: cornflowerblue;
     width: 100%;
     padding: 20px;
@@ -47,6 +47,9 @@ header h1{
 }
 #form {
     order: 3;
+}
+#Calculator{
+    order: 4;
 }
 a, a:visited {
     color: black;
@@ -131,7 +134,7 @@ ul {
     header {
         left:-20px;
     }
-    #hyperlinks,#table,#form {
+    #hyperlinks,#table,#form, #Calculator{
         width: 960px;
         margin: 25px auto;
     }
@@ -140,3 +143,4 @@ ul {
         margin-top: 50px;
     }
 }
+
