@@ -3,41 +3,41 @@
     padding: 0;
     overflow-x: hidden;
 }
-main,body div,nav {
+main, body > div, nav {
     display: flex;
     flex-direction: column;
 }
-header, nav, section, footer, Calculator{
+header, nav, article, footer {
     background-color: cornflowerblue;
     width: 100%;
     padding: 20px;
 }
-nav,section{
-    margin:20px 0px;
+nav, article {
+    margin: 20px 0px;
 }
-nav{
-    margin:20px 0px 10px;
-    order:2;
+nav {
+    margin: 20px 0px 10px;
+    order: 2;
 }
-#hyperlinks{
-    margin:10px 0px;
+#hyperlinks {
+    margin: 10px 0px;
 }
-header{
-    height:50px;
-    padding:20px;
-    order:1;
+header {
+    height: 50px;
+    padding: 20px;
+    order: 1;
 }
-#some_logo {
+#logo {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     background: red;
-    position:absolute;
+    position: absolute;
 }
-header h1{
-    text-align:center;
-    position:relative;
-    bottom:-5px;
+header h1 {
+    text-align: center;
+    position: relative;
+    bottom: -5px;
 }
 #table {
     order: 1;
@@ -49,7 +49,7 @@ header h1{
     order: 3;
 }
 #Calculator{
-    order: 4;
+    order:4;
 }
 a, a:visited {
     color: black;
@@ -57,7 +57,7 @@ a, a:visited {
 }
 a:hover {
     color: red;
-}
+ }
 th {
     background: yellow;
 }
@@ -92,26 +92,30 @@ table tr:nth-of-type(6) {
 table tr:nth-of-type(7) {
     background: red;
 }
-form {
-    margin: 10px 50px;
-}
 #fullname, #phone, #email, #birthday, #bio {
     padding: 2px;
 }
-ul {
+ul,form,#Calculator div {
     margin: 10px 50px;
 }
 #bio {
     width: 500px;
     height: 200px;
 }
-@media screen and (min-width:720px){
-    body div,nav{
-        flex-direction:row;
+#Calculator div {
+
+    border: 1px solid black;
+    width: max-content;
+    background-color: rosybrown;
+}
+@media screen and (min-width:720px) {
+    body > div, nav {
+        flex-direction: row;
     }
     body div {
         background-color: cornflowerblue;
-        width:100%;
+        justify-content:space-between;
+        width: 100%;
     }
     #table {
         order: 2;
@@ -120,27 +124,27 @@ ul {
         order: 1;
     }
     nav {
-        height:min-content;
-        margin:0px;
-        padding:10px;
+        height: min-content;
+        margin: 0px;
+        padding: 10px;
         text-align: center;
-        max-width: 960px;
-        width: 325px;
+        width: auto;
         border: 1px solid black;
+        flex-shrink:0;
+        gap:10px;
     }
-    nav a{
-        padding-right:5px;
+    nav a {
+        white-space:nowrap;
     }
     header {
-        left:-20px;
+        left: -20px;
     }
-    #hyperlinks,#table,#form, #Calculator{
+    #hyperlinks, #table, #form, #Calculator {
         width: 960px;
         margin: 25px auto;
     }
     footer {
-        padding:10px;
-        margin-top: 50px;
+        padding: 10px;
+        margin-top: 25px;
     }
 }
-
